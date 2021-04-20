@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;STM32F103VETX_FLASH.ld&apos; to &apos;stm32f103ve_fw&apos;" description="Move &apos;STM32F103VETX_FLASH.ld&apos; to &apos;stm32f103ve_fw&apos;" destination="/stm32f103ve_fw" element1="src/bsp/ldscript/STM32F103VETX_FLASH.ld" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1618588122088" updateReferences="true"/>
+</session>

@@ -1,0 +1,205 @@
+01:29:19 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
+make -j4 all 
+arm-none-eabi-gcc -o "stm32f103ve_fw.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103VET6\exam_arm\stm32f103ve_fw\src\bsp\ldscript\STM32F103VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103ve_fw.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:40: multiple definition of `__env'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:40: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:41: multiple definition of `environ'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:41: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `initialise_monitor_handles':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:46: multiple definition of `initialise_monitor_handles'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:46: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_getpid':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:50: multiple definition of `_getpid'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:50: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_kill':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:55: multiple definition of `_kill'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:55: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_exit':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:61: multiple definition of `_exit'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:61: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_close':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:90: multiple definition of `_close'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:90: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_fstat':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:96: multiple definition of `_fstat'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:96: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_isatty':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:102: multiple definition of `_isatty'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:102: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_lseek':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:107: multiple definition of `_lseek'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:107: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_open':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:112: multiple definition of `_open'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:112: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_wait':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:118: multiple definition of `_wait'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:118: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_unlink':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:124: multiple definition of `_unlink'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:124: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_times':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:130: multiple definition of `_times'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:130: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_stat':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:135: multiple definition of `_stat'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:135: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_link':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:141: multiple definition of `_link'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:141: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_fork':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:147: multiple definition of `_fork'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:147: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_execve':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:153: multiple definition of `_execve'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:153: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/sysmem.o: in function `_sbrk':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/sysmem.c:55: multiple definition of `_sbrk'; src/bsp/sysmem.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/sysmem.c:55: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:69: stm32f103ve_fw.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+01:30:45 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
+make -j4 all 
+arm-none-eabi-gcc -o "stm32f103ve_fw.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103VET6\exam_arm\stm32f103ve_fw\src\bsp\ldscript\STM32F103VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103ve_fw.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:40: multiple definition of `__env'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:40: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:41: multiple definition of `environ'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:41: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `initialise_monitor_handles':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:46: multiple definition of `initialise_monitor_handles'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:46: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_getpid':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:50: multiple definition of `_getpid'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:50: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_kill':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:55: multiple definition of `_kill'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:55: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_exit':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:61: multiple definition of `_exit'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:61: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_close':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:90: multiple definition of `_close'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:90: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_fstat':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:96: multiple definition of `_fstat'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:96: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_isatty':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:102: multiple definition of `_isatty'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:102: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_lseek':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:107: multiple definition of `_lseek'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:107: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_open':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:112: multiple definition of `_open'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:112: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_wait':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:118: multiple definition of `_wait'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:118: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_unlink':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:124: multiple definition of `_unlink'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:124: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_times':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:130: multiple definition of `_times'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:130: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_stat':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:135: multiple definition of `_stat'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:135: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_link':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:141: multiple definition of `_link'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:141: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_fork':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:147: multiple definition of `_fork'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:147: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/syscalls.o: in function `_execve':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/syscalls.c:153: multiple definition of `_execve'; src/bsp/syscalls.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/syscalls.c:153: first defined here
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/bsp/startup/sysmem.o: in function `_sbrk':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/startup/sysmem.c:55: multiple definition of `_sbrk'; src/bsp/sysmem.o:C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/bsp/sysmem.c:55: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:69: stm32f103ve_fw.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+01:31:27 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"src/bsp/startup/startup_stm32f103vetx.d" -MT"src/bsp/startup/startup_stm32f103vetx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/startup/startup_stm32f103vetx.o" "../src/bsp/startup/startup_stm32f103vetx.s"
+arm-none-eabi-gcc -o "stm32f103ve_fw.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103VET6\exam_arm\stm32f103ve_fw\src\bsp\ldscript\STM32F103VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103ve_fw.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f103ve_fw.elf
+ 
+arm-none-eabi-size   stm32f103ve_fw.elf 
+arm-none-eabi-objdump -h -S  stm32f103ve_fw.elf  > "stm32f103ve_fw.list"
+arm-none-eabi-objcopy  -O binary  stm32f103ve_fw.elf  "stm32f103ve_fw.bin"
+   text	   data	    bss	    dec	    hex	filename
+   5168	     36	   1572	   6776	   1a78	stm32f103ve_fw.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32f103ve_fw.bin
+Finished building: stm32f103ve_fw.list
+ 
+ 
+01:32:04 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
+make -j4 all 
+arm-none-eabi-gcc "../src/bsp/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xE -c -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/ap" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/bsp" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/hw" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common/core" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/STM32F1xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/sysmem.d" -MT"src/bsp/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/sysmem.o"
+arm-none-eabi-gcc -o "stm32f103ve_fw.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103VET6\exam_arm\stm32f103ve_fw\src\bsp\ldscript\STM32F103VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103ve_fw.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f103ve_fw.elf
+ 
+arm-none-eabi-objdump -h -S  stm32f103ve_fw.elf  > "stm32f103ve_fw.list"
+arm-none-eabi-objcopy  -O binary  stm32f103ve_fw.elf  "stm32f103ve_fw.bin"
+arm-none-eabi-size   stm32f103ve_fw.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5168	     36	   1572	   6776	   1a78	stm32f103ve_fw.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32f103ve_fw.bin
+Finished building: stm32f103ve_fw.list
+ 
+ 
+01:34:55 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
+make -j4 all 
+arm-none-eabi-size   stm32f103ve_fw.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5168	     36	   1572	   6776	   1a78	stm32f103ve_fw.elf
+Finished building: default.size.stdout
+ 
+01:39:00 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
+make -j4 all 
+arm-none-eabi-gcc "../src/bsp/bsp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xE -c -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/ap" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/bsp" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/hw" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common/core" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/STM32F1xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/bsp/bsp.d" -MT"src/bsp/bsp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/bsp/bsp.o"
+arm-none-eabi-gcc -o "stm32f103ve_fw.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103VET6\exam_arm\stm32f103ve_fw\src\bsp\ldscript\STM32F103VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103ve_fw.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f103ve_fw.elf
+ 
+arm-none-eabi-objdump -h -S  stm32f103ve_fw.elf  > "stm32f103ve_fw.list"
+arm-none-eabi-objcopy  -O binary  stm32f103ve_fw.elf  "stm32f103ve_fw.bin"
+arm-none-eabi-size   stm32f103ve_fw.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5120	     36	   1572	   6728	   1a48	stm32f103ve_fw.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32f103ve_fw.bin
+Finished building: stm32f103ve_fw.list
+ 
+ 
+01:39:08 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
+make -j4 all 
+arm-none-eabi-size   stm32f103ve_fw.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5120	     36	   1572	   6728	   1a48	stm32f103ve_fw.elf
+Finished building: default.size.stdout
+ 
+01:40:20 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xE -c -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/ap" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/bsp" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/hw" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common/core" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/STM32F1xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+../src/ap/ap.c: In function 'apMain':
+../src/ap/ap.c:31:4: warning: implicit declaration of function 'Ledoff'; did you mean 'LedOff'? [-Wimplicit-function-declaration]
+   31 |    Ledoff(_DEF_LED1);
+      |    ^~~~~~
+      |    LedOff
+arm-none-eabi-gcc -o "stm32f103ve_fw.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103VET6\exam_arm\stm32f103ve_fw\src\bsp\ldscript\STM32F103VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103ve_fw.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: src/ap/ap.o: in function `apMain':
+C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/ap/ap.c:31: undefined reference to `Ledoff'
+c:\st\stm32cubeide_1.6.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/Debug/../src/ap/ap.c:35: undefined reference to `Ledoff'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:69: stm32f103ve_fw.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+01:40:40 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xE -c -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/ap" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/bsp" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/hw" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common/core" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/STM32F1xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32f103ve_fw.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103VET6\exam_arm\stm32f103ve_fw\src\bsp\ldscript\STM32F103VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103ve_fw.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f103ve_fw.elf
+ 
+arm-none-eabi-objdump -h -S  stm32f103ve_fw.elf  > "stm32f103ve_fw.list"
+arm-none-eabi-objcopy  -O binary  stm32f103ve_fw.elf  "stm32f103ve_fw.bin"
+arm-none-eabi-size   stm32f103ve_fw.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5140	     36	   1572	   6748	   1a5c	stm32f103ve_fw.elf
+Finished building: default.size.stdout
+Finished building: stm32f103ve_fw.bin
+ 
+Finished building: stm32f103ve_fw.list
+ 
+ 
+01:40:47 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
+make -j4 all 
+arm-none-eabi-size   stm32f103ve_fw.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5140	     36	   1572	   6748	   1a5c	stm32f103ve_fw.elf
+Finished building: default.size.stdout
+ 
+01:55:56 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
+make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xE -c -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/ap" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/bsp" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/hw" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common/core" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/STM32F1xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32f103ve_fw.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103VET6\exam_arm\stm32f103ve_fw\src\bsp\ldscript\STM32F103VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103ve_fw.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f103ve_fw.elf
+ 
+arm-none-eabi-objdump -h -S  stm32f103ve_fw.elf  > "stm32f103ve_fw.list"
+arm-none-eabi-objcopy  -O binary  stm32f103ve_fw.elf  "stm32f103ve_fw.bin"
+arm-none-eabi-size   stm32f103ve_fw.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5140	     36	   1572	   6748	   1a5c	stm32f103ve_fw.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32f103ve_fw.bin
+Finished building: stm32f103ve_fw.list
+ 
+ 
