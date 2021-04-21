@@ -9,6 +9,7 @@ S_SRCS :=
 C_SRCS := 
 S_UPPER_SRCS := 
 O_SRCS := 
+OBJCOPY_HEX := 
 SIZE_OUTPUT := 
 OBJDUMP_LIST := 
 EXECUTABLES := 
@@ -23,6 +24,7 @@ SUBDIRS := \
 src/ap \
 src/bsp \
 src/bsp/startup \
+src/common/core \
 src/hw/driver \
 src/hw \
 src/lib/cube_f103ve/Drivers/STM32F1xx_HAL_Driver/Src \

@@ -15,7 +15,13 @@
 #include "bsp.h"
 
 //TODO: HW 설정 (2)
-
+#define   _USE_HW_UART
+#define   _USE_HW_TIM
+#define   _USE_HW_I2C
+#define   _USE_HW_SPI
+#define   _USE_HW_MOTOR
+#define   _USE_HW_MPU9250
+#define   _USE_HW_NRF24L01
 #define   _USE_HW_LED
 
 
@@ -23,8 +29,9 @@
 
 /*									Parameter
 ------------------------------------------------ */
-#define  HW_LED_MAX_CH					2
-
+#define  HW_LED_MAX_CH						2
+#define  HW_UART_MAX_CH						1
+#define  HW_MOTOR_MAX_CH			    4
 
 
 

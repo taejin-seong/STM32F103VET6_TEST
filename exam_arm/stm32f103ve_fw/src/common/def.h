@@ -25,5 +25,6 @@
 #define _DEF_LED1				  0
 #define _DEF_LED2					1
 
+#define _DEF_UART1				0
 
 #endif /* SRC_COMMON_DEF_H_ */

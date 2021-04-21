@@ -1,0 +1,6 @@
+motor.c:55:6:motorInit	40	static
+motor.c:112:6:Turn_Right	8	static
+motor.c:128:6:Turn_Left	8	static
+motor.c:141:6:Go_Straight	8	static
+motor.c:154:6:Back	8	static
+motor.c:169:6:Stop	8	static

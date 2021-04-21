@@ -26,7 +26,6 @@ led_tbl_t led_tbl[LED_MAX_CH] =
          /* LED을 사용할 Port와 Pin을 입력하세요.*/
 		{GPIOC, GPIO_PIN_6, GPIO_PIN_RESET, GPIO_PIN_RESET},
 		{GPIOC, GPIO_PIN_7, GPIO_PIN_RESET, GPIO_PIN_RESET}
-
 };
 
 

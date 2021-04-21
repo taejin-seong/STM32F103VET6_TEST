@@ -58,10 +58,24 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define IN1_MOTORA_Pin GPIO_PIN_12
+#define IN1_MOTORA_GPIO_Port GPIOB
+#define IN2_MOTORA_Pin GPIO_PIN_13
+#define IN2_MOTORA_GPIO_Port GPIOB
+#define IN3_MOTORB_Pin GPIO_PIN_14
+#define IN3_MOTORB_GPIO_Port GPIOB
+#define IN4_MOTORB_Pin GPIO_PIN_15
+#define IN4_MOTORB_GPIO_Port GPIOB
 #define LED_2_Pin GPIO_PIN_6
 #define LED_2_GPIO_Port GPIOC
 #define LED_1_Pin GPIO_PIN_7
 #define LED_1_GPIO_Port GPIOC
+#define SPI1_IRQ_Pin GPIO_PIN_3
+#define SPI1_IRQ_GPIO_Port GPIOB
+#define SPI1_CSN_Pin GPIO_PIN_4
+#define SPI1_CSN_GPIO_Port GPIOB
+#define SPI1_CE_Pin GPIO_PIN_5
+#define SPI1_CE_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

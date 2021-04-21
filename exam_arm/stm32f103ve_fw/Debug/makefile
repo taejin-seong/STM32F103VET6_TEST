@@ -12,6 +12,7 @@ RM := rm -rf
 -include src/lib/cube_f103ve/Drivers/STM32F1xx_HAL_Driver/Src/subdir.mk
 -include src/hw/driver/subdir.mk
 -include src/hw/subdir.mk
+-include src/common/core/subdir.mk
 -include src/bsp/startup/subdir.mk
 -include src/bsp/subdir.mk
 -include src/ap/subdir.mk
@@ -54,6 +55,9 @@ default.size.stdout \
 OBJDUMP_LIST += \
 stm32f103ve_fw.list \
 
+OBJCOPY_HEX += \
+stm32f103ve_fw.hex \
+
 OBJCOPY_BIN += \
 stm32f103ve_fw.bin \
 
@@ -66,7 +70,7 @@ main-build: stm32f103ve_fw.elf secondary-outputs
 
 # Tool invocations
 stm32f103ve_fw.elf: $(OBJS) $(USER_OBJS) C:\STM32\ Coding\ files\exam_fw103VET6\exam_arm\stm32f103ve_fw\src\bsp\ldscript\STM32F103VETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "stm32f103ve_fw.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103VET6\exam_arm\stm32f103ve_fw\src\bsp\ldscript\STM32F103VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103ve_fw.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "stm32f103ve_fw.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103VET6\exam_arm\stm32f103ve_fw\src\bsp\ldscript\STM32F103VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103ve_fw.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -80,6 +84,11 @@ stm32f103ve_fw.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+stm32f103ve_fw.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "stm32f103ve_fw.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 stm32f103ve_fw.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "stm32f103ve_fw.bin"
 	@echo 'Finished building: $@'
@@ -90,7 +99,7 @@ clean:
 	-$(RM) *
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX) $(OBJCOPY_BIN)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

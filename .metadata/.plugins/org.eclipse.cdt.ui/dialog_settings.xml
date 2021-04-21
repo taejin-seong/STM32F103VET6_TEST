@@ -10,7 +10,7 @@
 	<item key="org.eclipse.cdt.ui.codeformatter.create_profile_dialog.open_edit" value="true"/>
 	<item key="formatter_page.modify_dialog_tab_page.last_focus_index" value="6"/>
 	<item key="org.eclipse.cdt.uiformatter_pagemodify_dialog.last_focus" value="1"/>
-	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="STM32F103xE"/>
+	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="-u _printf_float"/>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
 	<section name="OptionalMessageDialog.hide.">

@@ -14,7 +14,14 @@
 #include "hw_def.h"
 
 
-
+//TODO: HW 설정 (1)
+#include "uart.h"
+#include "tim.h"
+#include "i2c.h"
+#include "spi.h"
+#include "motor.h"
+#include "mpu9250.h"
+#include "nrf24l01.h"
 #include "led.h"
 
 
