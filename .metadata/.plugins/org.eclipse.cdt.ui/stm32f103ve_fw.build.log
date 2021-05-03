@@ -1,10 +1,23 @@
-17:43:12 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
+22:08:36 **** Incremental Build of configuration Debug for project stm32f103ve_fw ****
 make -j4 all 
+arm-none-eabi-gcc "../src/ap/ap.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32F103xE -c -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/ap" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/bsp" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/hw" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common/hw/include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/common/core" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/CMSIS/Include" -I"C:/STM32 Coding files/exam_fw103VET6/exam_arm/stm32f103ve_fw/src/lib/cube_f103ve/Drivers/STM32F1xx_HAL_Driver/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"src/ap/ap.d" -MT"src/ap/ap.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "src/ap/ap.o"
+arm-none-eabi-gcc -o "stm32f103ve_fw.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\STM32 Coding files\exam_fw103VET6\exam_arm\stm32f103ve_fw\src\bsp\ldscript\STM32F103VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f103ve_fw.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f103ve_fw.elf
+ 
+arm-none-eabi-objdump -h -S  stm32f103ve_fw.elf  > "stm32f103ve_fw.list"
+arm-none-eabi-objcopy  -O ihex  stm32f103ve_fw.elf  "stm32f103ve_fw.hex"
+arm-none-eabi-objcopy  -O binary  stm32f103ve_fw.elf  "stm32f103ve_fw.bin"
 arm-none-eabi-size   stm32f103ve_fw.elf 
    text	   data	    bss	    dec	    hex	filename
-  44920	    536	   2424	  47880	   bb08	stm32f103ve_fw.elf
+  38860	    532	   2420	  41812	   a354	stm32f103ve_fw.elf
 Finished building: default.size.stdout
  
+Finished building: stm32f103ve_fw.hex
+Finished building: stm32f103ve_fw.bin
+ 
+ 
+Finished building: stm32f103ve_fw.list
+ 
 
-17:43:13 Build Finished. 0 errors, 0 warnings. (took 1s.672ms)
+22:08:43 Build Finished. 0 errors, 0 warnings. (took 6s.737ms)
 

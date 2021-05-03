@@ -22,7 +22,7 @@
 	   uartOpen(_DEF_UART1, 115200); //UART 개통
 
 	   /* TODO 4. nRF24L01 송신  초기화 셋팅  */
-/*
+
 	   while(NRF24L01_Check())
 	   {
 	  	  uartPrintf(_DEF_UART1,"NRF24L01 wireless module cannot be found by hardware\n" );
@@ -33,7 +33,7 @@
 
 	   NRF24L01_TX_Mode();
 	   uartPrintf(_DEF_UART1, "Enter data sending mode, send data every 1s\n");
-*/
+
 
 
 	   /* TODO 4. nRF24L01 수신 초기화 셋팅  */
@@ -56,7 +56,7 @@
 void apMain(void)
 {
 		/*  TODO 4. nRF24L01 송신 코드 (보낼 데이터) */
-	//uint8_t tmp_buf[]="Hey, data is received!";
+	uint8_t tmp_buf[]="Hey, data is received!";
 
 		/* TODO 4. nRF24L01 수신 코드 (받을 데이터 버퍼) */
 	//uint8_t tmp_buf[256]; // 임시로 지정
@@ -66,11 +66,11 @@ void apMain(void)
 	//int16_t AccData, MagData, GyroData ;
 
 	 /* TODO 5. MPU9250 축 테스트 변수  */
-	int16_t Ac_X, Ac_Y, Ac_Z, Gy_X, Gy_Y, Gy_Z, Ma_X, Ma_Y, Ma_Z;
+	//int16_t Ac_X, Ac_Y, Ac_Z, Gy_X, Gy_Y, Gy_Z, Ma_X, Ma_Y, Ma_Z;
 
 	  /* TODO 5. 상보 필터 테스트 변수  */
   //int16_t Reward_Mx, Reward_My; // 변환행렬 지자계 각도 보정 변수 *
-
+/*
 	  int16_t Base_Ax, Base_Ay,Base_Az, Base_Gx, Base_Gy, Base_Gz;
 	  int16_t Las_Angle_Gx , Las_Angle_Gy, Las_Angle_Gz;
 	  int16_t Angle_Ax, Angle_Ay, Angle_Gx, Angle_Gy, Angle_Gz; //Angle_Az,
@@ -79,8 +79,24 @@ void apMain(void)
 	  int32_t dt,pre_msec;
 
 	 calibrate(&Base_Ax, &Base_Ay, &Base_Az, &Base_Gx, &Base_Gy, &Base_Gz);
+*/
 
 
+		/* TODO 6. Encoder Motor 테스트 변수 */
+
+/*
+		HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
+		HAL_TIM_Encoder_Start(&htim4, TIM_CHANNEL_ALL);
+
+		uint32_t  TIM4_CNT, TIM2_CNT;
+	  uint8_t Pos_L, Pos_R = 0;
+		const float One_Thick_Distance = (float)( CIRCUMFERENCE / (GEAR_RATIO * ENCODER_PULSES ) );
+		float Thick_Left = 0.0;
+		float Thick_Right = 0.0;
+		float  Thick_Center = 0.0;
+	  float Distance, Past_Distance = 0.0;
+
+*/
 
 	while(1)
 	{
@@ -137,7 +153,7 @@ void apMain(void)
 
 
 			/* TODO 4.nRF24L01 송신 코드  */
-/*
+
 			if (NRF24L01_TxPacket(tmp_buf) == TX_OK)
 			{
 				uartPrintf(_DEF_UART1,"NRF24L01 wireless module data sent successfully: %s\n",tmp_buf);
@@ -146,7 +162,7 @@ void apMain(void)
 			{
 				uartPrintf(_DEF_UART1, "NRF24L01 wireless module data transmission failed\n");
 			}
-*/
+
 
 			/* TODO 4.nRF24L01 수신 코드 */
 /*
@@ -225,7 +241,7 @@ void apMain(void)
 
 			/* TODO: MPU9250: 변환행렬로 지자계 각도 비보정  */
 
-
+/*
 			dt = (millis()-pre_msec)/1000.0; //단위시간 변화량
 		  pre_msec = millis();
 
@@ -261,7 +277,7 @@ void apMain(void)
 		 uartPrintf(_DEF_UART1, "Roll:%d, Pitch %d, Yaw:%d , Yaw_G:%d, Yaw_M:%d \r\n", Roll, Pitch, Yaw, Yaw_G, Yaw_M);
 		 delay(5);
 
-
+*/
 
 			/* TODO 5. MPU9250 Yaw 제어 테스트 , GO기준값 잡고 그거 중심으로 R,L 범위 잡기, 실제 차량에서는 기준점을 잡는 것이 중요 */
 /*
@@ -298,6 +314,77 @@ void apMain(void)
 
 	  uartPrintf(_DEF_UART1, "Ma_X: %d, Ma_Y: %d, Ma_Z: %d \r\n", Ma_X, Ma_Y, Ma_Z);
 	  HAL_Delay(10);
+*/
+
+
+
+			/* TODO 6. Encoder 이동거리 테스트  */
+
+		//	Go_Straight();
+		//Back();
+/*			TIM2_CNT = TIM2 -> CNT;
+			TIM4_CNT = TIM4 -> CNT;
+
+			if (TIM2_CNT < 1320) // ppr * step * gear (11  * 4체배 * 30 )
+			{
+				Pos_L ++;
+				if (Pos_L == 330) // 샤프트 축 한바퀴 회전 시 총 출력되는 엔코더 펄스 수
+				{
+					Thick_Left  =   One_Thick_Distance;
+					Pos_L = 0;
+				}
+			}
+
+			if (TIM4_CNT < 1320)
+			{
+				Pos_R ++;
+				if (Pos_R == 330)
+				{
+					Thick_Right =   One_Thick_Distance;
+					Pos_R = 0;
+				}
+			}
+
+			else
+			{
+				Pos_L = 0; Pos_R = 0;
+			}
+
+			Thick_Center = (Thick_Right + Thick_Left) / 2;  // 현재 이동 거리
+			Past_Distance += Thick_Center ; // 과거 누적 이동거리
+
+			Distance =  ( (Past_Distance - 1) + Thick_Center) / 1000.0f ;  // 현재 누적 이동거리
+
+			uartPrintf(_DEF_UART1, " Thick_Center: %.3f  Past_Distance: %.3f \r\n", Thick_Center,Past_Distance);
+			uartPrintf(_DEF_UART1, "cnt:%d,%d distance: %.3fM  pos:%d, %d\r\n", TIM2_CNT,TIM4_CNT,Distance,Pos_L, Pos_R);
+*/
+
+/*
+			if  ( TIM2_CNT < 560 ) {
+			if  ( TIM4_CNT < 560 ) {
+
+				Pos ++;
+
+				if (Pos == 140)
+				{
+					Pos = 0;
+					Thick_Left  = Pos  *  One_Thick_Distance; //Pulse가 한주기에 카운터가 4만큼 증가(X4체배)
+					Thick_Right = Pos  *  One_Thick_Distance; //카운터 4개 셋트가 140번나와야지 한바퀴 돈 것
+															  //이거 가지고 카운터 140번 나오는 카운트 수 세야함 todo
+
+					Thick_Center = (Thick_Right + Thick_Left) / 2;  // 현재 이동 거리
+					Past_Distance += Thick_Center ; // 과거 누적 이동거리
+
+				    Distance =  ( (Past_Distance - 1) + Thick_Center) / 1000.0f ;  // 현재 누적 이동거리
+				    uartPrintf(_DEF_UART1, "distance: %.3f  pos:%d\r\n", Distance,Pos);
+				}
+
+			}
+		}
+
+
+		   // uartPrintf(_DEF_UART1, "l:%.3f, r:%.3f\n\r",Thick_Left, Thick_Right);
+		  // uartPrintf(_DEF_UART1, "distance: %.3f  pos:%d\r\n", Distance,Pos);
 */
 
 
